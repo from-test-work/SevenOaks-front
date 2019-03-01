@@ -1,0 +1,7 @@
+mixin tiles(data)
+    +b('ul').tiles
+        each item in data.items
+            +e('li').item
+                //+e('img').img(src= item.src alt= item.alt)
+                +e.title= item.title
+                +e('a').link(href= item.href)= item.action

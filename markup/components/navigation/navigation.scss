@@ -1,0 +1,14 @@
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    &__item{}
+    &__link{
+        color: $green;
+        text-decoration: none;
+        text-transform: uppercase;
+        &.active,
+        &:hover{
+            color: $aqua;
+        }
+    }
+}

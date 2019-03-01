@@ -1,0 +1,16 @@
+// File for scss-vars.
+// For example: main colors, paddings and so on.
+
+$white: #fff;
+$black: #000;
+$green: #668333;
+$orange: #f1715e;
+//$aqua: #66b3c5;
+$aqua: #4999af;
+$main: #f5efea;
+$footer: #515151;
+
+$color: '$aqua, $green, $orange';
+
+//darken(desaturate(adjust-hue($aqua, 2), 3.89), 10.00)
+

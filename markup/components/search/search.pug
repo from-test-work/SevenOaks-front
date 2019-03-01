@@ -1,0 +1,14 @@
+mixin search(data)
+    +b.search
+        +e.bg
+        +e.wrap
+            +e('input').box(type='search', placeholder='Search...')
+            +e.btn
+                i.fa.fa-search
+            +b('ul').searchList
+                +e('li').item
+                    +e('a').link(href='#') Calendar
+                +e('li').item
+                    +e('a').link(href='#') Blog
+                +e('li').item
+                    +e('a').link(href='#') Contact us

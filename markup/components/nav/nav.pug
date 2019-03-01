@@ -1,0 +1,12 @@
+include ../brand/brand
+include ../search/search
+include ../navigation/navigation
+
+mixin nav(data)
+    +b('nav').nav
+        +e.asside
+            +brand(brand)
+        +e.cnt
+            +search(search)
+            +navigation(navigation)
+

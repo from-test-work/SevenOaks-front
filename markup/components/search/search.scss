@@ -1,0 +1,135 @@
+.search {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    right: -30px;
+    width: 310px;
+    height: 35px;
+    //background: url('%=static=%content/search-bg.png');
+    &__bg{
+        background: $aqua;
+        opacity: 0.6;
+        width: 100%;
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            right: 0;
+            border-top: 13px solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 13px solid darken(desaturate(adjust-hue($aqua, 2), 3.89), 10.00);;
+            height: 35px;
+            width: 0;
+            opacity: 0.6;
+        }
+        &:after{
+            position: absolute;
+            content: '';
+            bottom: -13px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 13px solid $aqua;
+            border-right: 13px solid transparent;
+            opacity: 0.6;
+        }
+    }
+    &__wrap{
+        width: 100%;
+        height: 35px;
+        position: absolute;
+        overflow: hidden;
+        padding: 11px 47px 11px 12px;
+    }
+    &__btn{
+        width: 35px;
+        height: 35px;
+        float: right;
+        color: $white;
+        top: -11px;
+        right: -35px;
+        position: relative;
+        transition: .3s;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .fa-search{
+        position: relative;
+        width: 35px;
+        height: 35px;
+        &:before{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__box{
+        position: absolute;
+        background: transparent;
+        border: none;
+        -webkit-appearance: none;
+        font-size: 16px;
+        color: #fff;
+        top: -70px;
+        width: 230px;
+        transition: all .3s;
+    }
+    input::-webkit-input-placeholder {color:#fff;}
+    input::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+    input:-moz-placeholder           {color:#fff;}/* Firefox 18- */
+    input:-ms-input-placeholder      {color:#fff;}
+
+    &__box-active{
+        top: 10px!important;
+        transition: all .3s;
+    }
+
+    input:focus{
+        outline: none;
+    }
+
+    .active{
+        top: 70px!important;
+        position: relative;
+        transition: all .3s;
+    }
+}
+
+.searchList{
+    position: relative;
+    top: 50%;
+    display: flex;
+    justify-content: flex-start;
+    transition: all .3s;
+    transform: translateY(-50%);
+    &__item{
+        position: relative;
+    }
+    &__link{
+        text-decoration: none;
+        color: $white;
+        font-family: $ProximaNova;
+        font-size: 13px;
+        font-weight: 400;
+        &:hover{
+            color: $green;
+        }
+    }
+
+    &__item + *{
+        margin-left: 20px;
+        &:before{
+            position: absolute;
+            content: '';
+            top: 50%;
+            bottom: 0;
+            left: -10px;
+            width: 1px;
+            height: 10px;
+            background: $white;
+            transform: translateY(-50%);
+        }
+    }
+}

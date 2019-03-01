@@ -1,0 +1,5 @@
+mixin navigation(data)
+    +b('ul').navigation
+        each item in data.items
+            +e('li').item
+                +e('a').link(class= item.class href= item.href)= item.nav
